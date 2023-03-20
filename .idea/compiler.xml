@@ -7,13 +7,22 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="xuecheng" />
-        <module name="xuecheng-plus-parent" />
+      </profile>
+      <profile name="Annotation profile for xuecheng-plus-base" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$PROJECT_DIR$/../../../maven/maven-repository/org/projectlombok/lombok/1.18.8/lombok-1.18.8.jar" />
+        </processorPath>
+        <module name="xuecheng-plus-base" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="xuecheng-plus-parent" options="-parameters" />
+      <module name="xuecheng-plus-base" options="" />
+      <module name="xuecheng-plus-parent" options="" />
     </option>
   </component>
 </project>
